@@ -11,12 +11,20 @@ flowchart TD
     PB[projectbrief.md] --> PC[productContext.md]
     PB --> SP[systemPatterns.md]
     PB --> TC[techContext.md]
+    PB --> PI[projectIntegrity.md]
     
     PC --> AC[activeContext.md]
     SP --> AC
     TC --> AC
     
     AC --> P[progress.md]
+    
+    PI --> PB
+    PI --> PC
+    PI --> SP
+    PI --> TC
+    PI --> AC
+    PI --> P
 ```
 
 ### Core Files (Required)
@@ -55,6 +63,13 @@ flowchart TD
    - What's left to build
    - Current status
    - Known issues
+
+7. `projectIntegrity.md`
+   - Instructions for memory-bank integrity checks
+   - Validates memory bank consistency
+   - Verifies implementation alignment
+   - Ensures documentation accuracy
+   - This file should never be edited
 
 ### Additional Context
 Create additional files/folders within memory-bank/ when they help organize:
@@ -150,4 +165,4 @@ flowchart TD
 
 The format is flexible - focus on capturing valuable insights that help me work more effectively with you and the project. Think of .clinerules as a living document that grows smarter as we work together.
 
-REMEMBER: After every memory reset, I begin completely fresh. The Memory Bank is my only link to previous work. It must be maintained with precision and clarity, as my effectiveness depends entirely on its accuracy.
+REMEMBER: After every memory reset, I begin completely fresh. The Memory Bank is my only link to previous work. It must be maintained with precision and clarity, as my effectiveness depends entirely on its accuracy. An integrity check is my safeguard against documentation drift and implementation misalignment.
